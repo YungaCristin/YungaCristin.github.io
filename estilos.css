@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg,#ff758c,#ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Pantalla inicial */
+.pantalla {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Carta */
+.carta {
+    display: none;
+    background: white;
+    color: #ff2e63;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: zoom 1s ease;
+}
+
+/* Botones */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+#empezar {
+    background: white;
+    color: #ff4b7d;
+}
+
+#si {
+    background: #ff2e63;
+    color: white;
+}
+
+#no {
+    background: #444;
+    color: white;
+    position: relative;
+}
+
+/* Corazón */
+.corazon {
+    font-size: 60px;
+    animation: latido 1s infinite;
+}
+
+/* Contador */
+.contador {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/* Animaciones */
+@keyframes latido {
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+@keyframes fadeIn {
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes zoom {
+    from{transform:scale(0)}
+    to{transform:scale(1)}
+}
+
+.particula {
+    position: absolute;
+    font-size: 20px;
+    animation: caer 5s linear infinite;
+}
+
+@keyframes caer {
+    0%{transform:translateY(-100px);}
+    100%{transform:translateY(100vh);}
+}
+/* 🌳 Árbol romántico */
+.escena-imagen {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.arbol-img {
+    width: 450px;
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lluvia-corazones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.corazon-lluvia {
+    position: absolute;
+    top: -20px;
+    color: #ff1744;
+    font-size: 22px;
+    animation: caerFinal linear forwards;
+}
+
+@keyframes caerFinal {
+    to {
+        transform: translateY(600px);
+        opacity: 0.9;
+    }
+}
+
+/* importante */
+.escena-imagen {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.contador-amor {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #ff2e63;
+    font-weight: bold;
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+}
